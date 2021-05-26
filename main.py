@@ -20,9 +20,9 @@ def dominant_colors(df: pd.DataFrame,
     df['scaled_color_green'] = whiten(df['green'])
 
     cluster_centers, _ = kmeans2(df[['scaled_color_red',
-                                    'scaled_color_blue',
-                                    'scaled_color_green']],
-                                no_of_colors)
+                                     'scaled_color_blue',
+                                     'scaled_color_green']],
+                                 no_of_colors)
     dominant_colors_list = []
     red_std, green_std, blue_std = df[['red', 'green', 'blue']].std()
 
