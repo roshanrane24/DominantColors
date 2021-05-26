@@ -36,6 +36,10 @@ def dominant_colors(df: pd.DataFrame,
     return dominant_colors_list
 
 
+def get_dominant_colors(img_file: str) -> List[Tuple[int]]:
+    return dominant_colors(img2df(img_file))
+
+
 if __name__ == "__main__":
     df = img2df("./bulgaria.jpg")
     colors = dominant_colors(df)
