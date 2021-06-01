@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="DominantColors",
-    version="0.1",
+    version="0.2",
     author="Roshan Rane",
     author_email="roshan.ran3@gmail.com",
     description="A package to extract dominant colors from an image.",
@@ -17,7 +17,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independant"
     ],
-    package_dir={"": "."},
-    packages=find_packages(where="."),
+    package_dir={"": "dominant_colors"},
+    packages=find_packages(where="dominant_colors"),
     python_requires=">=3.6"
 )
