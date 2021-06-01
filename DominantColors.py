@@ -1,4 +1,4 @@
-from numpy import ndarray, ones
+from numpy import ndarray, ones, uint8
 from utils import Image
 from sklearn.cluster import KMeans
 
@@ -16,6 +16,6 @@ class DominantColors:
 
     def get_colors(self) -> ndarray:
         if self.image.image is not None:
-            return self.colors_kmeans(self.image).cluster_centers_.astype(int)
+            return self.colors_kmeans(self.image).cluster_centers_.astype(uint8)
         else:
-            return ones((3, 3)) * 255
+            return ones((3, 3), dtype=uint8) * 255
