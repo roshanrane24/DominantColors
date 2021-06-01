@@ -17,7 +17,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independant"
     ],
-    package_dir={"": "dominant_colors"},
-    packages=find_packages(where="dominant_colors"),
+    package_dir={"": "."},
+    packages=find_packages(where="."),
     python_requires=">=3.6"
 )
