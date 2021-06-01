@@ -4,9 +4,10 @@ from sklearn.cluster import KMeans
 
 
 class DominantColors:
-    def __init__(self, path: str):
+    def __init__(self, path: str, no_of_colors: int = 3):
         self.image: Image = Image(path)
         self.colors: ndarray = self.get_colors()
+        self.clusters = no_of_colors
 
     @staticmethod
     def colors_kmeans(image: Image, clusters: int = 3) -> KMeans:
@@ -16,6 +17,7 @@ class DominantColors:
 
     def get_colors(self) -> ndarray:
         if self.image.image is not None:
-            return self.colors_kmeans(self.image).cluster_centers_.astype(uint8)
+            return self.colors_kmeans(self.image,
+                                      clusters=self.clusters).cluster_centers_.astype(uint8)
         else:
             return ones((3, 3), dtype=uint8) * 255
