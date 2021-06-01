@@ -1,3 +1,4 @@
 lib64
 pyvenv.cfg
-
+.venv
+__pycache__/
