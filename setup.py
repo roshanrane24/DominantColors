@@ -19,5 +19,6 @@ setup(
     ],
     package_dir={"": "."},
     packages=find_packages(where="."),
+    install_requires=["opencv-python", "sklearn", "numpy"],
     python_requires=">=3.6"
 )
