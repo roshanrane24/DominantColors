@@ -6,8 +6,8 @@ from sklearn.cluster import KMeans
 class DominantColors:
     def __init__(self, path: str, no_of_colors: int = 3):
         self.image: Image = Image(path)
-        self.colors: ndarray = self.get_colors()
         self.clusters = no_of_colors
+        self.colors: ndarray = self.get_colors()
 
     @staticmethod
     def colors_kmeans(image: Image, clusters: int = 3) -> KMeans:
