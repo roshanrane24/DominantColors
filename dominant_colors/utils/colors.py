@@ -37,7 +37,6 @@ def rgb2hsl(color: ndarray) -> ndarray:
 def hsl2rgb(color: ndarray) -> ndarray:
     Hi, Si, Li = color.astype(float64)
     H, S, L = Hi/360, Si/100, Li/100
-    print(H, S, L)
 
     if S == 0:
         return array([L * 255, L * 255, L * 255], dtype=uint8)
