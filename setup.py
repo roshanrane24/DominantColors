@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="DominantColors",
-    version="0.3",
+    version="0.3.1",
     author="Roshan Rane",
     author_email="roshan.ran3@gmail.com",
     description="A package to extract dominant colors from an image.",
