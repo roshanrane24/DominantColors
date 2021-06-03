@@ -1,5 +1,5 @@
 from numpy import ndarray, ones, uint8
-from utils import Image
+from dominant_colors.utils import Image
 from sklearn.cluster import KMeans
 
 
